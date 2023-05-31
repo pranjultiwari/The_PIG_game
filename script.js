@@ -5,6 +5,7 @@ let rollDice = document.querySelector('.btn--roll');
 let current_0= document.getElementById('current--0');
 
 let current = 0;
+let activePlayer = 0;
 
 score0.textContent = 0;
 score1.textContent = 0;
@@ -20,7 +21,14 @@ rollDice.addEventListener('click', function()
     if(diceNumber != 1)
     {
     current += diceNumber;
-    current_0.textContent = current;
+    // current_0.textContent = current;
+    document.getElementById(`current--${activePlayer}`).textContent = current;
+    }
+
+    else{
+        current = 0;
+        document.getElementById(`current--${activePlayer}`).textContent = current;
+        activePlayer = activePlayer === 0? 1: 0;
     }
     
 })
