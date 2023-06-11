@@ -58,7 +58,7 @@ hold.addEventListener('click', function(){
 
    if(scores[activePlayer] >= 10){
     document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
-    document.getElementById(`name--${activePlayer}`).textContent = 'Winner!'
+    document.getElementById(`name--${activePlayer}`).textContent = 'Winner! '
 
    }
    else{
