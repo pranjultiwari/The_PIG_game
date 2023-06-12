@@ -3,13 +3,18 @@ let score1 = document.getElementById('score--1');
 let dice = document.querySelector('.dice');
 let rollDice = document.querySelector('.btn--roll');
 let current_0= document.getElementById('current--0');
+let current_1= document.getElementById('current--1');
 
 let current = 0;
 let activePlayer = 0;
 let player0 = document.querySelector('.player--0');
 let player1 = document.querySelector('.player--1');
 
-let winner = document.querySelector('.name--')
+let name0 = document.querySelector('.name--0');
+let name1 = document.querySelector('.name--1');
+
+let winner = document.querySelector('.name--');
+let newgame = document.querySelector('.btn--new');
 
 let hold = document.querySelector('.btn--hold');
 let scores = [0,0];
@@ -56,7 +61,7 @@ hold.addEventListener('click', function(){
    scores[activePlayer] += current;
    document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
-   if(scores[activePlayer] >= 100){
+   if(scores[activePlayer] >= 10){
     document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
     document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
     document.getElementById(`name--${activePlayer}`).textContent = 'Winner!';
@@ -68,4 +73,23 @@ hold.addEventListener('click', function(){
    else{
     switchScore();
    }
+})
+
+newgame.addEventListener('click', function(){
+    score0.textContent = 0;
+    score1.textContent = 0;
+    current_0.textContent = 0;
+    current_1.textContent = 0;
+    player0.classList.remove('player--winner');
+    player1.classList.remove('player--winner');
+    player0.classList.add('player--active');
+    player1.classList.remove('player--active');
+    rollDice.classList.remove('hidden');
+    hold.classList.remove('hidden');
+    activePlayer = 0;
+    current =0;
+    scores = [0, 0];
+    name0.textContent = "Player 1";
+    name1.textContent = "Player 2";
+
 })
