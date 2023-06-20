@@ -21,9 +21,11 @@ let init = function()
     score1.textContent = 0;
     current_0.textContent = 0;
     current_1.textContent = 0;
+    let userInput0 = prompt("Enter Player-1:");
+    let userInput1 = prompt("Enter Player-1:");
 
-    name0.textContent = "Player 1";
-    name1.textContent = "Player 2";
+    name0.textContent = userInput0;
+    name1.textContent = userInput1;
     player0.classList.remove('player--winner');
     player1.classList.remove('player--winner');
     player0.classList.add('player--active');
