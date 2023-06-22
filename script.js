@@ -22,7 +22,7 @@ let init = function()
     current_0.textContent = 0;
     current_1.textContent = 0;
     let userInput0 = prompt("Enter Player-1:");
-    let userInput1 = prompt("Enter Player-1:");
+    let userInput1 = prompt("Enter Player-2:");
 
     name0.textContent = userInput0;
     name1.textContent = userInput1;
