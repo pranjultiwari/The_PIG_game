@@ -88,7 +88,8 @@ hold.addEventListener('click', function(){
    {
     document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
     document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
-    document.getElementById(`name--${activePlayer}`).textContent = '👑Winner👑';
+    userInput0.textContent = ``
+    document.getElementById(`name--${activePlayer}`).textContent = `👑The Winner is ${userInput0}👑`;
     dice.classList.add('hidden');
     rollDice.classList.add('hidden');
     hold.classList.add('hidden');
@@ -102,3 +103,4 @@ hold.addEventListener('click', function(){
 })
 
 newgame.addEventListener('click',init );
+
