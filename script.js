@@ -14,6 +14,7 @@ let hold = document.querySelector('.btn--hold');
 let current;
 let activePlayer;
 let scores;
+// hello
 
 let init = function()
 {
